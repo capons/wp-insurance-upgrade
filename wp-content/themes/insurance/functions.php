@@ -150,7 +150,7 @@ add_image_size( 'mid_size', 600 );
 add_image_size( 'lrg_size', 1200 );
 add_image_size( 'sup_size', 2400 );
 */
-/*Add responsive custome WP clas to add responsive image to content*/
+/*Add responsive custome WP class to add responsive image to content*/
 function add_responsive_class($content){
 
 	$content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
@@ -168,6 +168,23 @@ function add_responsive_class($content){
 }
 add_filter ('the_content', 'add_responsive_class');
 /*End add_responsive_class*/
+
+
+
+/*Register new menu*/
+function register_my_menus() {
+	register_nav_menus(
+		array(
+			'corporate clients' => __( 'Corporate clients' ),
+			'private clients' => __( 'Private Clients' ),
+			'check policy' => __( 'Check Policy' )
+		)
+	);
+}
+add_action( 'init', 'register_my_menus' );
+
+
+
 
 
 

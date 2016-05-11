@@ -43,14 +43,16 @@ get_header(); ?>
                 </div>
             </div>
             -->
+            <!--Display Breadcrumbs -->
             <div class="row">
-                <div id="breadcrams" class="col-xs-12">
-                    <ol class="breadcrumb layout">
-                        <li><a href="#">Главная</a></li>
-                        <li class="active"><?php echo get_the_title();?></li>
-                    </ol>
+                <div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
+                    <?php if(function_exists('bcn_display'))
+                    {
+                        bcn_display();
+                    }?>
                 </div>
             </div>
+
             <div class="row">
                 <div id="cont-line-layout2" class="col-xs-11">
 
@@ -172,7 +174,7 @@ get_header(); ?>
                                 ?>
                             </li>
                             
-                            <li  class="panel"> <a id="layout-topmenu" data-toggle="collapse" data-parent="#accordion1" href="#firstLink"><p style="margin-top: 10px;">ЧАСТНЫМ КЛИЕНТАМ</p></a>
+                            <li  class="panel"> <a id="layout-topmenu-b" data-toggle="collapse" data-parent="#accordion1" href="#firstLink"><p style="margin-top: 10px;">ЧАСТНЫМ КЛИЕНТАМ</p></a>
                                 <?php
                                 //wp menu
                                 wp_nav_menu( array(
@@ -201,7 +203,53 @@ get_header(); ?>
                                 ?>
                             </li>
                         </ul>
-                        
+                        <?php $pagename = $post->post_name;
+                        //echo $pagename;
+                        echo wp_title();
+                        if($pagename == 'green-card') {
+                            echo 'ok';
+                            ?>
+                            <script>
+                                $(document).ready(function () {
+                                    console.log('test');
+                                    $('#firstLink').collapse('show');
+                                })
+                            </script>
+                            <?php
+                        }
+                        ?>
+                        <?php
+                        //$menu_slug = 'private clients';
+                        $menus = get_registered_nav_menus();
+                        $curent_menu_elem = array();
+                        foreach ( $menus as $location => $description ) {
+                            // echo $location . ': ' . $description . '<br />';
+                            $menu_elements = wp_get_nav_menu_items ($location);
+                            //if (isset($menu_elements)) {
+                                foreach ($menu_elements as $row) {
+                                    //array_push($curent_menu_elem,$row->title);
+                                    $curent_menu_elem[$location][$row->title] = ''; //= $row->title;
+                                }
+
+                           // }
+
+                        }
+                        echo '<pre>';
+                        print_r($curent_menu_elem);
+                        echo '</pre>';
+                        $curent_menu_page = $curent_menu_elem['corporate clients'];
+                        foreach ($curent_menu_page as $key => $item) {
+                            echo $key;
+                        }
+
+
+
+
+
+                        ?>
+
+
+
 
 
                         <!--

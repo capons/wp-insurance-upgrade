@@ -48,6 +48,8 @@
 	<!--logo slider -->
 	<script src="<?php bloginfo("template_directory");?>/js/logo-slider/jquery.cycle.all.min.js"></script>
 	<script src="<?php bloginfo("template_directory");?>/js/logo-slider/lgs_jquery.cycle2.js"></script>
+	<!--main js -->
+	<script src="<?php bloginfo("template_directory");?>/js/main.js"></script>
 	<?php// wp_head(); ?>
 </head>
 

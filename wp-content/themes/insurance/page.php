@@ -4,7 +4,7 @@
 get_header(); ?>
 
 <?php //echo do_shortcode("[gs_logo]"); ?>
-<?php // echo do_shortcode("[wowslider id="1"]"); ?>
+<?php // echo do_shortcode("[accordionmenu id="unique3cec031" accordionmenu='247']"); ?>
 <?php// wp_get_archives('type=postbypost'); ?>
 
 <?php if(have_posts()): while(have_posts()):the_post();?>

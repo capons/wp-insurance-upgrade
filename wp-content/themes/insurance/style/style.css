@@ -540,6 +540,17 @@ background: url(../image/slider_bg.png)no-repeat center;
     font-size: 15px;
     font-weight: 600;
 }
+#layout-topmenu-b {
+    background: rgb(220,143,42);
+    /*
+    min-width: 287px;
+    */
+    min-height: 60px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
 #layout-topmenu-gr {
     background: rgb(85,107,70);
     min-height: 60px;
@@ -640,3 +651,7 @@ background: url(../image/slider_bg.png)no-repeat center;
         float: none;
     }
 }
+
+
+
+
