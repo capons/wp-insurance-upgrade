@@ -114,12 +114,31 @@ add_action( 'widgets_init', 'insurance_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+
 function insurance_scripts() {
+	/*
 	wp_enqueue_style( 'insurance-style', get_stylesheet_uri() );
-
+	
 	wp_enqueue_script( 'insurance-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
+	
 	wp_enqueue_script( 'insurance-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	*/
+	/*main css*/
+
+
+		// comment out the next two lines to load the local copy of jQuery
+
+	
+	/*main style*/
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/style/style.css',false,'1.1','all');
+	/*main js */
+	wp_enqueue_script( 'insurance-navigation', get_template_directory_uri() . '/js/main.js');
+	/*<!--Slider main JS file -->*/
+	wp_enqueue_script( 'insurance-navigation', get_template_directory_uri() . '/js/sliderWD/jquery.mobile.js');
+	wp_enqueue_script( 'insurance-navigation', get_template_directory_uri() . '/js/sliderWD/wds.js');
+	wp_enqueue_script( 'insurance-navigation', get_template_directory_uri() . '/js/sliderWD/wds_frontend.js');
+	/*Logo slider*/
+	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -127,8 +146,9 @@ function insurance_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'insurance_scripts' );
 
-/*
- * remove nav bar class
+
+
+ /*
 add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1);
 add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1);
 add_filter('page_css_class', 'my_css_attributes_filter', 100, 1);
@@ -184,8 +204,23 @@ function register_my_menus() {
 add_action( 'init', 'register_my_menus' );
 
 
+/*Remove admin ligin panal (to remove margin top from html)*/
+add_action('get_header', 'remove_admin_login_header');
+function remove_admin_login_header() {
+	remove_action('wp_head', '_admin_bar_bump_cb');
+}
 
 
+
+/*
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+	if( in_array('current-menu-item', $classes) ){
+		$classes[] = 'active ';
+	}
+	return $classes;
+}
+*/
 
 
 

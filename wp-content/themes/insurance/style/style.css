@@ -1,30 +1,32 @@
 /*WP Elements*/
 /*Menu active*/
 /*main menu*/
-.nav.navbar-nav > .active a { /*nav menu active OFF*/
-    background-color: inherit; !important;
-    color: white;
-}
-.nav.navbar-nav > .active a:hover { /*nav menu active OFF*/
-    background-color: inherit; !important;
-    color: white;
-}
-/*service menu*/
-#layout_menu > li.active {
-    background-color: #86a989;
-}
+
 /*End menu active*/
 /*WP NO RESPONSIV IMG + Snipe block*/
 #wp-img-inline  img {
     display: inline-block;
 }
+.active {
+    background-color: #1b6d85;
+}
+
 /*End WP NO RESPONSIVE IMG*/
 /*End WP Elements*/
-
-
+.clearfix:after {
+    content: '';
+    display: table;
+    height: 0;
+    clear: both;
+}
+.clearfix:before {
+    content: '';
+    display: table;
+    height: 0;
+    clear: both;
+}
 body {
     font-family: Open Sans Condensed;
-    min-width: 670px;
 }
 
 .no-padding {
@@ -36,10 +38,50 @@ body {
 .t-elign-c {
     text-align: center;
 }
+.insur-container {
+    /*
+    width: 1000px;
+    margin: 0px auto;
+    */
+    /* Margin/padding copied from Bootstrap */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 
+    /* Set width to your desired site width */
+    width: 1000px;
+}
 /*header menu*/
+
+#top-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+
+}
+
+#top-menu > li {
+    float: left;
+}
+#top-menu > li > a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#header-content {
+    min-width: 1000px;
+    display: table;
+    height: 100%;
+    margin: 0px auto;
+}
 #s-menu {
     background-color: rgb(68,66,67);
+    height: 48px;
 }
 .navbar {
     margin-bottom: 0px;
@@ -73,7 +115,7 @@ body {
     display: inline-block;
 }
 #d-sp-p {
-    padding-top: 2px;
+    font-size: 17px;
 }
 #s-button {
     background: url(../image/search_icon.png) no-repeat center;
@@ -88,10 +130,10 @@ body {
 }
 /*end header menu*/
 /*header content*/
-.col-lg-3.h-content {
+.col-xs-3.h-content {
     padding: 15px;
 }
-.col-lg-6.h-content {
+.col-xs-6.h-content {
     padding: 15px;
 }
 #h-logo {
@@ -99,7 +141,7 @@ body {
     height: auto;
 }
 #h-content-info {
-    padding-top: 10px;
+    padding-top: 20px;
 }
 #h-content-info ul {
     padding: 0;
@@ -132,36 +174,23 @@ body {
 }
 #d-sp {
     color:rgb(106,124,60);
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 600;
 }
 .saleoffice.no-margin {
     text-align: right;
     font-weight: 600;
+    font-size: 17px;
 }
 .office_n.no-margin {
     text-align: right;
+    font-size: 17px;
 }
 /*end header content*/
 
 /*content*/
 
-/*#slider-section*/
-#slider-section {
 
-min-height: 334px;
-/*
-background: url(../image/slider_bg.png)no-repeat center;
-*/
-    display: flex;
-    align-items: center;
-}
-/* //slider_bg
-#slider_bg_img {
-    max-width: 100%;
-    height: auto;
-}
-*/
 #b-more-info {
     background: url(../image/detail_b.png) no-repeat center;
     height: 42px;
@@ -235,7 +264,7 @@ background: url(../image/slider_bg.png)no-repeat center;
     width: 204px;
     outline: none;
 }
-.col-lg-12.c-s-b-transport {
+.col-xs-12.c-s-b-transport {
     background: url(../image/transport_hover.png) no-repeat center center;
     min-height: 192px;
     min-height: 192px;
@@ -243,7 +272,7 @@ background: url(../image/slider_bg.png)no-repeat center;
     align-items: center;
     justify-content: center;
 }
-.col-lg-12.c-s-b-transport:hover {
+.col-xs-12.c-s-b-transport:hover {
 
     background: url(../image/transport.png) no-repeat center center;
     min-height: 192px;
@@ -251,7 +280,7 @@ background: url(../image/slider_bg.png)no-repeat center;
     align-items: center;
     justify-content: center;
 }
-.col-lg-12.c-s-b-medical {
+.col-xs-12.c-s-b-medical {
 
     background: url(../image/medical_hover.png) no-repeat center center;
     min-height: 192px;
@@ -259,22 +288,21 @@ background: url(../image/slider_bg.png)no-repeat center;
     align-items: center;
     justify-content: center;
 }
-.col-lg-12.c-s-b-medical:hover {
+.col-xs-12.c-s-b-medical:hover {
     background: url(../image/medical.png) no-repeat center center;
-
     min-height: 192px;
 }
-.col-lg-12.c-s-b-medical:hover #s-s-detail {
+.col-xs-12.c-s-b-medical:hover #s-s-detail {
     display: block;
 }
-.col-lg-12.c-s-b-insurance {
+.col-xs-12.c-s-b-insurance {
     background: url(../image/home_insurance_hover.png) no-repeat center center;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 192px;
 }
-.col-lg-12.c-s-b-insurance:hover {
+.col-xs-12.c-s-b-insurance:hover {
     background: url(../image/home_insurance.png) no-repeat center center;
     min-height: 192px;
 }
@@ -293,7 +321,7 @@ background: url(../image/slider_bg.png)no-repeat center;
     color:white;
     margin-bottom: 0px;
 }
-.col-lg-12.c-s-b-insurance:hover #s-s-detail-i {
+.col-xs-12.c-s-b-insurance:hover #s-s-detail-i {
     display: block;
 }
 #s-s-detail-i {
@@ -311,7 +339,7 @@ background: url(../image/slider_bg.png)no-repeat center;
     color:white;
     margin-bottom: 0px;
 }
-.col-lg-12.c-s-b-transport:hover #s-s-detail-t {
+.col-xs-12.c-s-b-transport:hover #s-s-detail-t {
     display: block;
 }
 #s-s-detail-t {
@@ -347,7 +375,9 @@ background: url(../image/slider_bg.png)no-repeat center;
 .table-full {
     width: 100%;
 }
-
+#logo-slider-wraper {
+    min-width: 650px; !important;
+}
 #mult-bg {
     background: url(../image/mult.png) no-repeat center center;
 
@@ -590,6 +620,7 @@ background: url(../image/slider_bg.png)no-repeat center;
 /*End contact Form 7 style*/
 
 /*Media*/
+/*
 @media  (max-width: 1200px){
     #a-map {
         justify-content: end;
@@ -651,6 +682,7 @@ background: url(../image/slider_bg.png)no-repeat center;
         float: none;
     }
 }
+*/
 
 
 

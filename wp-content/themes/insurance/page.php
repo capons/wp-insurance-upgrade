@@ -13,35 +13,35 @@ get_header(); ?>
 
 	<!--content -->
 
-	<section id="main-content">
-		<div class="container">
+	<section style="min-width: 1000px;" id="main-content">
+		<div style="height: 100%" class="insur-container">
 			<div id="buttons-m-c" style="padding: 30px;" class="row">
-				<div  class="col-lg-3 t-elign-c">
+				<div  class="col-xs-3 t-elign-c">
 					<img id="b-f-b" src="<?php bloginfo("template_directory");?>/image/b_people.png">
 				</div>
-				<div class="col-lg-3 t-elign-c">
+				<div class="col-xs-3 t-elign-c">
 					<button id="b-money" style="border: none;background-color: inherit"><p style="text-align: right;font-family: 'Century Gothic';font-weight: 600;font-size: 12px;margin-right: 25px;margin-bottom: 0px">ВОПРОС<br>СПЕЦИАЛИСТУ</p></button>
 				</div>
-				<div class="col-lg-3 t-elign-c">
+				<div class="col-xs-3 t-elign-c">
 					<button id="b-tool" style="border: none;background-color: inherit"><p style="text-align: right;font-family: 'Century Gothic';font-weight: 600;font-size: 12px;margin-right: 25px;margin-bottom: 0px">СТРАХОВОЙ<br>СЛУЧАЙ</p></button>
 				</div>
-				<div class="col-lg-3 t-elign-c">
+				<div class="col-xs-3 t-elign-c">
 					<button id="b-agent" style="border: none;background-color: inherit"><p style="text-align: right;font-family: 'Century Gothic';font-weight: 600;font-size: 12px;margin-right: 25px;margin-bottom: 0px">СВЯЗАТЬСЯ С<br>АГЕНТОМ</p></button>
 				</div>
 			</div>
 			<div id="c-services" style="padding: 30px;" class="row">
 				<div class="col-xs-4">
-					<div  class="col-lg-12 c-s-b-transport">
+					<div  class="col-xs-12 c-s-b-transport">
 						<button id="s-s-detail-t"><p>УЗНАТЬ ПОДРОБНОСТИ >>></p></button>
 					</div>
 				</div>
 				<div class="col-xs-4">
-					<div class="col-lg-12 c-s-b-medical">
+					<div class="col-xs-12 c-s-b-medical">
 						<button id="s-s-detail"><p>УЗНАТЬ ПОДРОБНОСТИ >>></p></button>
 					</div>
 				</div>
 				<div class="col-xs-4">
-					<div class="col-lg-12 c-s-b-insurance">
+					<div class="col-xs-12 c-s-b-insurance">
 						<button id="s-s-detail-i"><p>УЗНАТЬ ПОДРОБНОСТИ >>></p></button>
 					</div>
 				</div>
@@ -53,7 +53,7 @@ get_header(); ?>
 			</div>
 			<div class="row">
 				<div  class="col-xs-11 center">
-					<div class="col-lg-8">
+					<div class="col-xs-8">
 						<table class="table-full">
 							<tr>
 								<td colspan="2">
@@ -116,7 +116,7 @@ get_header(); ?>
 							</tr>
 						</table>
 					</div>
-					<div id="mult-bg" class="col-lg-4">
+					<div id="mult-bg" class="col-xs-4">
 
 					</div>
 				</div>
@@ -132,28 +132,25 @@ get_header(); ?>
 						<a id="a-tech" href="#"><span id="technologi"></span>Обратный звонок</a>
 					</div>
 					<div class="col-xs-6">
-						<a id="a-map" href="#"><span id="map_b"></span>Обратный звонок</a>
+						<a id="a-map" href="#"><span id="map_b"></span>Карта проезда</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!--News Section -->
-	<section>
-
-
-
-		<div  style=""  class="col-lg-5 col-lg-offset-1">
+	<section style="min-width: 1000px;">
+		<div style="height: 100%" class="insur-container clearfix">
+		<div  style=""  class="col-xs-6">
 			<div style="display: flex; align-items: baseline;" class="col-xs-12">
-				<div class="col-lg-6">
+				<div class="col-xs-6">
 					<p style="font-size: 30px">Новости</p>
 				</div>
-				<div style="text-align: right" class="col-lg-6">
+				<div style="text-align: right" class="col-xs-6">
 					<a href="<?php echo get_site_url(); ?>/news_post">Все новости</a>
 				</div>
 			</div>
 			<?php
-
 			$argss = array('category_name' => 'news', 'posts_per_page' => 2, 'order'=> 'ASC', 'orderby' => 'title' );
 			$postslists = get_posts( $argss);
 			foreach ( $postslists as $post ) :
@@ -183,18 +180,18 @@ get_header(); ?>
 			</div>
 			-->
 		</div>
-		<div style="background: rgb(235,234,230);" class="col-lg-6">
-			<div class="col-lg-11">
+		<div style="background: rgb(235,234,230);" class="col-xs-6">
+			<div class="col-xs-12">
 				<!--
 				<div class="col-xs-12">
 					<p style="font-size: 30px">Полезная информация</p>
 				</div>
 				-->
 				<div style="display: flex; align-items: baseline;" class="col-xs-12">
-					<div class="col-lg-6">
+					<div class="col-xs-8">
 						<p style="font-size: 30px">Полезная информация</p>
 					</div>
-					<div style="text-align: right" class="col-lg-6">
+					<div style="text-align: right" class="col-xs-4">
 						<a href="<?php echo get_site_url(); ?>/help_info_post">Все статьи</a>
 					</div>
 				</div>
@@ -226,28 +223,28 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-
+		</div>
 
 
 
 	</section>
-	<section>
-		<div class="container">
+	<section  style="min-width: 1000px;">
+		<div style="height: 100%" class="insur-container clearfix">
 			<div style="display: flex;align-items: center;padding: 10px" class="col-xs-12">
 				<!--
 				<img id="ou-clients" src="<?php bloginfo("template_directory");?>/image/clients.png" alt="alt">
 				-->
-				<div class="col-lg-2">
+				<div class="col-xs-3">
 					<span style="font-family: 'Century Gothic';font-weight: 600;font-size: 20px">Наши клиенты</span>
 				</div>
-				<div class="col-xs-10">
+				<div class="col-xs-9">
 					<?php logo_slider(); ?>
 				</div>
 
 
 			</div>
 		</div>
-		<div id="orange-line" class="col-lg-12">
+		<div id="orange-line" class="col-xs-12">
 
 		</div>
 	</section>

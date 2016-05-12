@@ -27,6 +27,7 @@ var news = (function () {
     doConstruct.prototype = {
         accordian_active: function () {
             //$('#firstLink').collapse('show');
+           
         }
     };
     return new doConstruct;
